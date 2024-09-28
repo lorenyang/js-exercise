@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const obj = {
+        uname: 'pink',
+        age : 18,
+        hobby: ['乒乓球', '足球'],
+        family: {
+            baby: 'loren'
+        },
+    }
+    const o = {}
+    function deepCopy(newObj, oldObj) {
+        for(let k in oldObj) {
+            if (oldObj[k] instanceof Array) {
+                newObj[k] = []
+                deepCopy(newObj[k], oldObj[k])
+            } else {
+                if (oldObj[k] instanceof Object) {
+                    newObj[k] = {}
+                    deepCopy(newObj[k], oldObj[k])
+                } else {
+                    newObj[k] = oldObj[k]
+                }
+            }
+        }
+    }
+    deepCopy(o, obj)
+    console.log(o)
+    o.age = 20
+    o.hobby[0] = '蓝球'
+    o.family.baby = 'hello'
+    console.log(obj)
+
+    // 09091 五 A c a a b b d b cde cde
+    //
+    // 09091 二 A b b a b b d b acd ab
+    //
+    // 09091 三 A D A B C B A C ABD ABE
+
+    //05151 四 A B C A B C BD ABCD ABCDE CDE
+
+    //05151 六 A B C D C ABE ABCDE  ABCD AE ABCE
+
+    //05151 六
+
+
+
+</script>
+
+</body>
+</html>

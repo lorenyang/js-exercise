@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // function Star(name, age){
+    //     this.name = name
+    //     this.age = age
+    //     // this.sing = function() {
+    //     //     console.log('唱歌')
+    //     // }
+    // }
+    // //Star.prototype.sing = function (){
+    //     console.log('唱歌')
+    // }
+    //
+
+    //
+    // const ldh = new Star('刘德华', 55)
+    // const zxy = new Star('张学友', 58)
+    // // console.log(ldh.sing === zxy.sing)
+    // ldh.sing()
+    // zxy.sing()
+    //
+    // console.log(ldh.sing === zxy.sing)
+
+
+    let that
+    function Star(uname){
+        // that = this
+        this.uname = uname
+    }
+
+    // 原型对象理面的函数this指向的还是实例对象 ldh
+    Star.prototype.sing = function (){
+        that = this
+        console.log('唱歌')
+    }
+
+    // 实例矿象 Ldh
+    // 构造函数里面的this 就是实例对象 ldh
+
+    const ldh = new Star('刘德华')
+    ldh.sing()
+    console.log(that === ldh)
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // //split 把字符串 转换为数组 和join（）相反
+    // const str = 'pink,red'
+    // const arr = str.split(',')
+    // console.log(arr)
+    // const str1 = '2022-4-8'
+    // const arr1 = str1.split('-')
+    // console.log(arr1)
+
+    // 2. 字符串的截取substring（开始的索引号［，结束的索引号］）
+    // 2.1 如果省略 结束的索引号，默认取到最后
+    // 2.2 结束的索引号不包含想要截取的部分
+    // const str = '今天需要做核酸了'
+    // console.log(str.substring(5,7))
+
+    // 3. startsWith 判断是不是以某个字符开头
+    // const str = 'loren老师上课中'
+    // console.log(str.startsWith('loren'))
+
+    // 4.includes 判断某个字符是不是包含在一个字符串里面
+    const str = '八二彭于晏'
+    console.log(str.includes('彭于晏')) //true
+    const str1 = '八二彭于晏'
+    console.log(str1.includes('彭于晏', 1)) //从下标为 1 的字符后面 开始数
+</script>
+
+</body>
+</html>
